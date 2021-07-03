@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "TicTacToe.Maui.WinUI": {
+      "commandName": "AppContainer"
+    }
+  }
+}
