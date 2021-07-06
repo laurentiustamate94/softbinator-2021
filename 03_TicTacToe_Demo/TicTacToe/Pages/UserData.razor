@@ -1,0 +1,20 @@
+﻿@page "/userData"
+
+<h2>Tic Tac Toe game</h2>
+<hr />
+
+<EditForm Model="@userDataModel" OnValidSubmit="@HandleValidSubmit">
+	<DataAnnotationsValidator />
+	<ValidationSummary />
+
+	<div class="form-group">
+		<label for="firstPlayerName">First player name</label>
+		<InputText id="firstPlayerName" class="form-control" @bind-Value="userDataModel.FirstPlayerName" aria-describedby="emailHelp" />
+	</div>
+	<div class="form-group">
+		<label for="secondPlayerName">Second player name</label>
+		<InputText id="secondPlayerName" class="form-control" @bind-Value="userDataModel.SecondPlayerName" aria-describedby="emailHelp" />
+	</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+
+</EditForm>

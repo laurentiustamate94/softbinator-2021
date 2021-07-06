@@ -1,0 +1,18 @@
+﻿@page "/board"
+
+<h3>Next player: "@(game.IsXTurn() ? 'X' : 'O')"</h3>
+
+<div class="board">
+    @for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            int squareNumber = (3 * i) + j;
+            int row = i;
+            int column = j;
+            <Square @key=squareNumber
+                    valueFromProps=@game.GetCharacter(row, column)
+                    ChangeValueFromProps="@(() => HandleClick(row, column))"/>
+        }
+    }
+</div>
