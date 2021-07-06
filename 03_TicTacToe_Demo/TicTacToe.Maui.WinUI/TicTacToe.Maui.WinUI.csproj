@@ -24,12 +24,14 @@
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="..\TicTacToe.Maui\Resources\Fonts\*" Link="Resources\Fonts\%(Filename)%(Extension)" />
+  
+		<MauiAsset Include="..\TicTacToe.Maui\wwwroot\appsettings.winui.json" Link="Resources\Raw\%(Filename)%(Extension)" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<Compile Include="..\TicTacToe.Maui\**\*.cs" Exclude="..\TicTacToe.Maui\bin\**;..\TicTacToe.Maui\obj\**;..\TicTacToe.Maui\Android\**;..\TicTacToe.Maui\iOS\**;..\TicTacToe.Maui\MacCatalyst\**" Link="%(RecursiveDir)%(Filename)%(Extension)" />
 		<MauiXaml Include="..\TicTacToe.Maui\**\*.xaml" Exclude="..\TicTacToe.Maui\bin\**;..\TicTacToe.Maui\obj\**" Link="%(RecursiveDir)%(FileName)%(Extension)" />
-		<_ThisProjectStaticWebAsset Include="..\TicTacToe.Maui\wwwroot\**" Link="wwwroot\%(RecursiveDir)%(Filename)%(Extension)" RelativePath="%(RecursiveDir)%(Filename)%(Extension)" />
+		<_ThisProjectStaticWebAsset Include="..\TicTacToe.Maui\wwwroot\**" Exclude="..\TicTacToe.Maui\wwwroot\appsettings.winui.json" Link="wwwroot\%(RecursiveDir)%(Filename)%(Extension)" RelativePath="%(RecursiveDir)%(Filename)%(Extension)" />
 		<None Include="@(_ThisProjectStaticWebAsset)" />
 		<RazorComponent Include="..\TicTacToe.Maui\**\*.razor" Exclude="..\TicTacToe.Maui\bin\**;..\TicTacToe.Maui\obj\**" Link="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
@@ -44,6 +46,7 @@
 		<PackageReference Include="Microsoft.ProjectReunion" Version="0.8.0-preview" />
 		<PackageReference Include="Microsoft.ProjectReunion.Foundation" Version="0.8.0-preview" />
 		<PackageReference Include="Microsoft.ProjectReunion.WinUI" Version="0.8.0-preview" />
+		<PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.0.2" />
 		<ProjectReference Include="..\TicTacToe\TicTacToe.csproj" />
 		<FrameworkReference Update="Microsoft.Windows.SDK.NET.Ref" RuntimeFrameworkVersion="10.0.19041.16" />
 		<FrameworkReference Update="Microsoft.Windows.SDK.NET.Ref" TargetingPackVersion="10.0.19041.16" />
