@@ -30,7 +30,7 @@ In this section of the workshop, we will see how to create a basic MauiApp. We w
 
 To rotate the DotNetBotImage we will use the command below to rotate it 10 degrees times the number of clicks we did within 1 second.
 ```csharp
-    DotNetBotImage.RotateTo(10 * count, 1000);
+DotNetBotImage.RotateTo(10 * count, 1000);
 ```
 
 # 02_Blazor_Maui_Demo
@@ -72,7 +72,7 @@ We'll then define a service that exposes a delegate to which we will hook the ac
 
 This is the part where things get interested. Just a heads up that this section may cause anxiety, frustration and depression as most preview code does.
 
-If you want to follow the workshop and code section by section, I suggest switching to the (workshop branch)[https://github.com/laurentiustamate94/softbinator-2021/tree/workshop].
+If you want to follow the workshop and code section by section, I suggest switching to the [workshop branch](https://github.com/laurentiustamate94/softbinator-2021/tree/workshop).
 
 ## TLDR what we'll be actually doing
 1. One solution that serves Windows, macOS, Android, iOS and Web
@@ -84,9 +84,9 @@ If you want to follow the workshop and code section by section, I suggest switch
 
 ### Single solution for cross-platform development using Razor libraries
 
-We'll start from the (workshop branch)[https://github.com/laurentiustamate94/softbinator-2021/tree/workshop] with the solution and project already created. There was a bit of a struggle to hook everything up so no need to do this in the workshop. The project structure is similar with the BlazorMauiApp except we added the Web project that runs a Kestrel web server.
+We'll start from the [workshop branch](https://github.com/laurentiustamate94/softbinator-2021/tree/workshop) with the solution and project already created. There was a bit of a struggle to hook everything up so no need to do this in the workshop. The project structure is similar with the BlazorMauiApp except we added the Web project that runs a Kestrel web server.
 
-We already have the TicTacToe engine implementation from (a previous workshop)[https://github.com/microsoft-dx/ms-monday-uwp-tic-tac-toe/] that I did so we'll bundle the code from there. You could say this is lazyness, but this code is 3 years old - what I'm trying to prove is that we can take old code (from an UWP project in this case) and retarget it to .NET 6 class library.
+We already have the TicTacToe engine implementation from [a previous workshop](https://github.com/microsoft-dx/ms-monday-uwp-tic-tac-toe/) that I did so we'll bundle the code from there. You could say this is lazyness, but this code is 3 years old - what I'm trying to prove is that we can take old code (from an UWP project in this case) and retarget it to .NET 6 class library.
 
 Interface segregation is crucial here because we want to play a different type of game depending on what we will select from the UI. For this, we have an `IGame` interface and an `IPlayer` interface, 2 game implementations (Singleplayer and Multiplayer) and 2 player implementations (human and computer).
 
