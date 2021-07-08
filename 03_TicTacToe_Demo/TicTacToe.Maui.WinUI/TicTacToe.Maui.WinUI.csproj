@@ -24,6 +24,8 @@
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="..\TicTacToe.Maui\Resources\Fonts\*" Link="Resources\Fonts\%(Filename)%(Extension)" />
+
+    <MauiAsset Include="..\TicTacToe.Maui\wwwroot\appsettings.winui.json" Link="Resources\Raw\%(Filename)%(Extension)" />
 	</ItemGroup>
 
 	<ItemGroup>

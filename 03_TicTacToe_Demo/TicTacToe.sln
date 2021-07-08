@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe.Maui", "TicTacToe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe.Maui.WinUI", "TicTacToe.Maui.WinUI\TicTacToe.Maui.WinUI.csproj", "{E6593070-7254-443E-8389-58C6C9FB0B42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.Engine", "TicTacToe.Engine\TicTacToe.Engine.csproj", "{858830DC-9817-4FB4-823A-ABE2717886B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe.Engine", "TicTacToe.Engine\TicTacToe.Engine.csproj", "{858830DC-9817-4FB4-823A-ABE2717886B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

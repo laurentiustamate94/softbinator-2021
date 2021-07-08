@@ -6,6 +6,7 @@ using Microsoft.Maui;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.LifecycleEvents;
+using TicTacToe.Services;
 
 namespace TicTacToe.Maui
 {
@@ -25,6 +26,15 @@ namespace TicTacToe.Maui
                 {
                     services.AddBlazorWebView();
                     services.AddTicTacToe();
+#if WINDOWS
+                    services.AddSingleton<INotificationService, WinUI.Windows.NotificationService>();
+#endif
+                })
+                .ConfigureAppConfiguration(builder =>
+                {
+#if WINDOWS
+                    builder.AddJsonFile(Path.Combine("Assets", "Resources", "Raw", "appsettings.winui.json"));
+#endif
                 })
                 .ConfigureLifecycleEvents(lifecycle =>
                 {
