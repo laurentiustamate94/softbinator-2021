@@ -10,14 +10,17 @@ namespace TicTacToe.Engine.Games
     public interface IGame
     {
         void UpdateStatus();
+
         void UpdateMoves(int row, int column);
 
         GameStatus Insert(int row, int column);
 
         char GetCharacter(int row, int column);
 
-        bool IsOver();
+        bool IsTide();
+
         bool IsXTurn();
+
         bool Is0Turn();
 
         void Restart();

@@ -17,51 +17,57 @@ namespace TicTacToe.Engine.Players
 
         public void Insert0(int row, int column, int[,] moves)
         {
-            FindMove(row, column, moves);
+            FindMove(2, moves);
         }
 
         public void InsertX(int row, int column, int[,] moves)
         {
-            //FindMove(row, column, moves);
+            FindMove(1, moves);
         }
 
-        private static void FindMove(int row, int column, int[,] moves)
+        private static void FindMove(int digit, int[,] moves)
         {
             for (int i = 0; i < 3; i++)
-                if (isPossibleToMoveHere(moves, i, i))
+            {
+                if (IsPossibleToMoveHere(moves, i, i))
                 {
-                    MoveHere(row, column, moves, i, i);
+                    MoveHere(digit, moves, i, i);
                     return;
 
                 }
+            }
 
             for (int i = 1; i < 3; i++)
-                if (isPossibleToMoveHere(moves, 0, i))
+            {
+                if (IsPossibleToMoveHere(moves, 0, i))
                 {
-                    MoveHere(row, column, moves, 0, i);
+                    MoveHere(digit, moves, 0, i);
                     return;
-
                 }
+            }
 
             for (int i = 0; i < 3; i++)
+            {
                 for (int j = 0; j < 3; j++)
-                    if (isPossibleToMoveHere(moves, i, j))
+                {
+                    if (IsPossibleToMoveHere(moves, i, j))
                     {
-                        MoveHere(row, column, moves, i, j);
+                        MoveHere(digit, moves, i, j);
                         return;
 
                     }
+                }
+            }
         }
 
-        private static bool isPossibleToMoveHere(int[,] moves, int i, int j)
+        private static bool IsPossibleToMoveHere(int[,] moves, int i, int j)
         {
             return moves[i, j] == 0;
         }
 
-        private static void MoveHere(int row, int column, int[,] moves, int i, int j)
+        private static void MoveHere(int digit, int[,] moves, int i, int j)
         {
-            moves[i, j] = 2;
+            moves[i, j] = digit;
         }
-
     }
 }

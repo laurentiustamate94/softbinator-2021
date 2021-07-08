@@ -13,10 +13,4 @@
     <ProjectReference Include="..\TicTacToe\TicTacToe.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Content Update="wwwroot\appsettings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
 </Project>

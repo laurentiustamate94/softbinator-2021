@@ -11,6 +11,7 @@ namespace TicTacToe.Engine.Players
         string Name { get; set; }
 
         void InsertX(int row, int column, int[,] moves);
+
         void Insert0(int row, int column, int[,] moves);
     }
 }

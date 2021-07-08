@@ -17,12 +17,12 @@ namespace TicTacToe.Engine.Players
 
         public void InsertX(int row, int column, int[,] moves)
         {
-            //
+            moves[row, column] = 1;
         }
 
         public void Insert0(int row, int column, int[,] moves)
         {
-            //
+            moves[row, column] = 2;
         }
     }
 }
